@@ -1,0 +1,525 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400&family=PT+Sans+Caption:wght@400;700&display=swap");
+
+html {
+  scrollbar-width: normal;
+  scroll-behavior: auto;
+  scroll-snap-type: y mandatory;
+}
+
+html::-webkit-scrollbar {
+  width: 5px;
+  scrollbar-color: yellow black;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: yellow;
+  border-radius: 15px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(12, 12, 12);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Background shape-circle */
+/* .shape-cube {
+  position: absolute;
+  border: 7px solid yellow;
+  padding: 20px;
+  width: 350px;
+  height: 250px;
+  top: 20px;
+  left: 80%;
+  z-index: -3;
+}
+
+.shape-circle {
+  position: absolute;
+  border: 7px solid yellow;
+  border-radius: 50%;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+  top: 500px;
+  left: -10%;
+  z-index: -3;
+} */
+
+/*navbar setting*/
+nav {
+  font-family: "PT Sans Caption", sans-serif;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  background-color: rgb(0, 0, 0);
+  justify-content: space-around;
+  padding: 5px 0px;
+  color: yellow;
+  height: 50px;
+  font-weight: bold;
+  align-items: center;
+  z-index: 3;
+  padding-left: 20px;
+}
+nav .logo img {
+  position: relative;
+  margin: auto;
+  width: 15px;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  width: 30%;
+  justify-content: space-around;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  padding: 10px 25px;
+  display: block;
+  color: yellow;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+nav ul li a,
+nav ul li a:after,
+nav ul li a:before {
+  transition: all 0.5s;
+}
+nav ul li a:hover {
+  color: #555;
+}
+
+/* SHIFT */
+nav.nav-bar ul li a {
+  position: relative;
+  z-index: 1;
+}
+nav.nav-bar ul li a:hover {
+  color: black;
+}
+nav.nav-bar ul li a:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 1px;
+  content: ".";
+  border-radius: 20px;
+  color: transparent;
+  background: yellow;
+  visibility: none;
+  opacity: 0;
+  z-index: -1;
+}
+nav.nav-bar ul li a:hover:after {
+  opacity: 1;
+  visibility: visible;
+  height: 100%;
+}
+
+/* hero bar */
+.hero-section {
+  position: relative;
+  padding-top: 120px;
+  padding-left: 250px;
+  padding-right: 250px;
+  width: 100;
+  height: 550px;
+  scroll-behavior: smooth;
+  scroll-snap-type: center;
+}
+
+.hero-container h1,
+.hero-container p {
+  position: relative;
+  color: yellow;
+  width: 500px;
+  top: 120px;
+}
+
+.hero-section h1 {
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 45px;
+}
+
+.hero-section p {
+  font-family: "Mukta", sans-serif;
+  font-size: 15px;
+}
+
+/* Photo */
+.photo-home {
+  position: relative;
+  display: block;
+  margin-left: auto;
+  bottom: 50px;
+  width: 250px;
+  border-radius: 5%;
+  border-top-left-radius: 25%;
+  border-bottom-right-radius: 25%;
+}
+
+/* icon setting */
+.social-menu ul {
+  top: 365px;
+  position: absolute;
+  left: 0;
+  padding-left: 235px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.social-menu ul li {
+  list-style: none;
+  width: 50px;
+  height: 50px;
+  font-size: 10px;
+  margin: auto;
+  align-items: center;
+  padding: 0;
+}
+
+.social-menu ul li a {
+  position: relative;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  border-radius: 30%;
+  background-color: yellow;
+  transition: 0.6s;
+  transform: scale(0.5);
+  margin: auto;
+}
+
+.social-menu ul li img {
+  transform: scale(0.9);
+}
+
+
+.social-menu ul li a:hover {
+  transform: translate(0px, 3px);
+  background-color: black;
+  border: yellow;
+}
+
+/* .aboutme-shape */
+.aboutme-page {
+  position: relative;
+  padding-top: 120px;
+  padding-bottom: 100px;
+  padding-left: 250px;
+  padding-right: 250px;
+  height: 100vh;
+  scroll-behavior: smooth;
+  scroll-snap-type: center;
+}
+.aboutme-box {
+  background: #1d1d1d;
+  height: 500px;
+  border-radius: 20px;
+}
+
+.aboutme-page h1 {
+  font-family: "PT Sans Caption", sans-serif;
+  position: relative;
+  font-size: 30px;
+  letter-spacing: 0.15em;
+  color: yellow;
+  text-align: justify;
+  left: 390px;
+  top: 60px;
+}
+
+.aboutme-box p {
+  font-family: "Mukta", sans-serif;
+  position: relative;
+  line-height: 30px;
+  font-size: 17px;
+  width: 45%;
+  color: yellow;
+  top: 70px;
+  text-align: justify;
+  left: 390px;
+}
+
+.fotosaya {
+  position: absolute;
+  max-width: 333px;
+  justify-content: top;
+  top: 120px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+/* Project page */
+.project-section {
+  position: relative;
+  height: 100vh;
+  padding-left: 250px;
+  padding-right: 250px;
+  padding-top: 120px;
+  padding-bottom: 100px;
+  scroll-snap-type: center;
+}
+.project-head {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+.project-box-head {
+  width: 200px;
+  height: 50px;
+  background: #1d1d1d;
+  border-radius: 30px;
+  border: 1px solid yellow;
+}
+
+.project-head h1 {
+  font-family: "PT Sans Caption", sans-serif;
+  font-size: 30px;
+  color: yellow;
+  text-align: center;
+  position: absolute;
+  padding-top: 5px;
+}
+
+#project-icon {
+  padding-top: 5px;
+  position: relative;
+  top: 25px;
+  padding-left: 5px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+#project-icon img {
+  width: 25px;
+  height: 25px;
+}
+
+/* project box */
+.project-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-gap: 40px;
+  position: relative;
+  margin: auto;
+  top: 100px;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+#project {
+  width: 250px;
+  height: 330px;
+  border-radius: 20px;
+  background: #1d1d1d;
+  padding: 20px 10px 10px 10px;
+  transition: 0.6s;
+}
+
+#project:hover {
+  transform: scale(1.1);
+  box-shadow: -1px 2px 20px 10px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -1px 2px 20px 10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 2px 20px 10px rgba(0, 0, 0, 0.75);
+}
+
+/* project text position */
+.project-box #project h1,
+.project-box #project p {
+  position: relative;
+  top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+#project p:nth-child(4) {
+  color: yellow;
+  font-size: 15px;
+  font-family: "PT Sans Caption", sans-serif;
+}
+/* project box */
+#project-images-box {
+  border-radius: 15px;
+  width: 220px;
+  height: 150px;
+  left: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+/* coming soon box */
+#project-images-box:nth-last-child(2) {
+  background: rgb(63, 63, 63);
+  visibility: visible;
+}
+#project h1:nth-child(2) {
+  font-family: "PT Sans Caption", sans-serif;
+  color: yellow;
+}
+/* project 1 */
+.project-1 img {
+  width: 220px;
+  height: 150px;
+  clip-path: inset(0 0 0 0 round 20px 20px 20px 20px);
+}
+.project-1 h1 {
+  font-family: "PT Sans Caption", sans-serif;
+  color: yellow;
+  font-size: 20px;
+}
+.project-1 p {
+  padding-top: 0px;
+  font-family: "Mukta", sans-serif;
+  color: rgb(248, 248, 147);
+  font-size: 13px;
+  text-align: justify;
+}
+.project-1 h1:nth-child(4) {
+  padding-top: 0px;
+  font-size: 15px;
+}
+
+/* footer */
+footer {
+  margin: auto;
+  height: 150px;
+  width: 100%;
+  position: relative;
+  background: black;
+}
+.footer-box {
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.footer-box h1 {
+  font-family: "PT Sans Caption", sans-serif;
+  color: yellow;
+  font-size: 50px;
+}
+.footer-box p {
+  color: yellow;
+  font-family: "Mukta", sans-serif;
+  margin: auto;
+}
+/* responsive breakpoint */
+/* tablet size*/
+@media only screen and (max-width: 768px) {
+  * {
+    padding: 0;
+    margin: 0;
+  }
+}
+/* mobile size*/
+@media screen and (max-width: 576px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body {
+    position: relative;
+  }
+
+  nav .logo img {
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    top: 15px;
+  }
+  nav ul {
+    visibility: hidden;
+  }
+
+  .hero-section,
+  .aboutme-page,
+  .project-section,
+  footer {
+    overflow-y: hidden;
+    overflow-x: hidden;
+  }
+
+  .hero-section {
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 100vh;
+    height: 1200px;
+  }
+
+  .hero-container h1,
+  .hero-container p {
+    padding-left: 5px;
+    padding-right: 15px;
+    text-align: justify;
+    width: 414px;
+    top: 330px;
+  }
+  .hero-section h1 {
+    font-family: "PT Sans Caption", sans-serif;
+    font-size: 50px;
+  }
+
+  .hero-section p {
+    font-family: "Mukta", sans-serif;
+    font-size: 25px;
+  }
+  .photo-home {
+    width: 450px;
+    border-radius: 0;
+    z-index: -1;
+    align-items: center;
+    right: 450px;
+    bottom: 400px;
+  }
+  .social-menu ul {
+    top: 740px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: auto;
+    gap: 25px;
+   
+  }
+
+  .social-menu ul li a {
+    border-radius: 0;
+    width: 400px;
+    height: 60px;
+    right: 227px;
+    transform: scale(1);
+  }
+  .social-menu ul li img {
+    justify-content: center;
+    margin: auto;
+  }
+}
