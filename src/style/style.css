@@ -211,7 +211,6 @@ nav.nav-bar ul li a:hover:after {
   transform: scale(0.9);
 }
 
-
 .social-menu ul li a:hover {
   transform: translate(0px, 3px);
   background-color: black;
@@ -221,8 +220,8 @@ nav.nav-bar ul li a:hover:after {
 /* .aboutme-shape */
 .aboutme-page {
   position: relative;
-  padding-top: 120px;
-  padding-bottom: 100px;
+  padding-top: 150px;
+  padding-bottom: 150px;
   padding-left: 250px;
   padding-right: 250px;
   height: 100vh;
@@ -230,9 +229,12 @@ nav.nav-bar ul li a:hover:after {
   scroll-snap-type: center;
 }
 .aboutme-box {
+  position: relative;
   background: #1d1d1d;
   height: 500px;
   border-radius: 20px;
+  margin: auto;
+  width: 850px;
 }
 
 .aboutme-page h1 {
@@ -257,12 +259,23 @@ nav.nav-bar ul li a:hover:after {
   text-align: justify;
   left: 390px;
 }
-
+.aboutme-box ul {
+  position: relative;
+  top: 80px;
+  left: 410px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 300px;
+}
+.aboutme-box li {
+  list-style-type: square;
+  color: yellow;
+}
 .fotosaya {
   position: absolute;
   max-width: 333px;
   justify-content: top;
-  top: 120px;
+  top: 0px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
 }
@@ -271,10 +284,11 @@ nav.nav-bar ul li a:hover:after {
 .project-section {
   position: relative;
   height: 100vh;
+  width: 100%;
   padding-left: 250px;
   padding-right: 250px;
-  padding-top: 120px;
-  padding-bottom: 100px;
+  padding-top: 150px;
+  padding-bottom: 150px;
   scroll-snap-type: center;
 }
 .project-head {
@@ -286,6 +300,7 @@ nav.nav-bar ul li a:hover:after {
   right: 0;
 }
 .project-box-head {
+  margin: auto;
   width: 200px;
   height: 50px;
   background: #1d1d1d;
@@ -320,18 +335,15 @@ nav.nav-bar ul li a:hover:after {
 /* project box */
 .project-box {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
   grid-gap: 40px;
   position: relative;
   margin: auto;
   top: 100px;
-  left: 0;
-  right: 0;
-  justify-content: center;
-  align-items: center;
 }
 
 #project {
+  margin: auto;
   width: 250px;
   height: 330px;
   border-radius: 20px;
@@ -508,9 +520,7 @@ footer {
     grid-template-columns: repeat(1, 1fr);
     margin: auto;
     gap: 25px;
-   
   }
-
   .social-menu ul li a {
     border-radius: 0;
     width: 400px;
@@ -521,5 +531,82 @@ footer {
   .social-menu ul li img {
     justify-content: center;
     margin: auto;
+  }
+  /* about me page */
+  .aboutme-page {
+    margin: auto;
+    padding: 0;
+    height: 600px;
+
+  }
+  .aboutme-box {
+    left: 0;
+    height: 600px;
+    border-radius: 0;
+    margin: auto;
+    width: 100%;
+  }
+  .fotosaya {
+    visibility: hidden;
+  }
+
+  .aboutme-page h1 {
+    left: 0;
+    text-align: center;
+    right: 0;
+    margin: auto;
+  }
+  .aboutme-page p {
+    left: 0;
+    margin: auto;
+    width: 300px;
+  }
+
+  .aboutme-box ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-around;
+    margin: auto;
+    padding: 5px 70px 0 70px;
+    left: 0;
+    right: 0;
+  }
+  .aboutme-box li {
+    list-style-type: square;
+    color: yellow;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+  /* project page */
+  .project-section {
+    padding: 50px 10px 25px 10px;
+  }
+  .project-box {
+    height: 1000px;
+  }
+
+  #project:nth-child(3) {
+    visibility: hidden;
+  }
+  #project {
+    margin: auto;
+  }
+  #project:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  /* footer */
+  .footer-box {
+    padding: 45px 0px 25px 0px;
+  }
+  .footer-box h1 {
+    padding: 0;
+    font-size: 35px;
+  }
+
+  .footer-box p {
+    font-size: 10px;
   }
 }
